@@ -4,7 +4,7 @@ import {Message} from '../model/message';
 import {tap} from 'rxjs/operators';
 
 @Component({
-  selector: 'messages',
+  selector: 'app-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css']
 })

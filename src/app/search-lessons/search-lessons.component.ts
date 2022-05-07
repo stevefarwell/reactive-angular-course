@@ -18,7 +18,7 @@ import {Lesson} from '../model/lesson';
 
 
 @Component({
-  selector: 'course',
+  selector: 'app-search-lessons',
   templateUrl: './search-lessons.component.html',
   styleUrls: ['./search-lessons.component.css']
 })

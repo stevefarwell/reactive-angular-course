@@ -18,7 +18,7 @@ import {Lesson} from '../model/lesson';
 
 
 @Component({
-  selector: 'course',
+  selector: 'app-course',
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.css']
 })

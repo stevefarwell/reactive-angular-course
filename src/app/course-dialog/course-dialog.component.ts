@@ -7,7 +7,7 @@ import {catchError} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 
 @Component({
-    selector: 'course-dialog',
+    selector: 'app-course-dialog',
     templateUrl: './course-dialog.component.html',
     styleUrls: ['./course-dialog.component.css']
 })
