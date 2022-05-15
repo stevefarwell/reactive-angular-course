@@ -13,7 +13,8 @@ export class CoursesCardListComponent implements OnInit {
   @Input()
   courses: Course[] = [];
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
   }
