@@ -21,7 +21,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadCourses();
 
+  }
+
+  loadCourses(): void {
     const courses$ = this.courseService.loadAllCourses()
       .pipe(
         map(courses => courses.sort(sortCoursesBySeqNo))
