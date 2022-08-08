@@ -19,6 +19,7 @@
     </button>
 
     <button mat-button class="mat-raised-button mat-accent"
+            *ngIf="isLoggedIn$ | async"
             (click)="editCourse(course)">
       EDIT
     </button>

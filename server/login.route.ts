@@ -10,6 +10,8 @@ export function loginUser(req: Request, res: Response) {
 
   const user = authenticate(email, password);
 
+  console.log('user: ', user);
+
   if (user) {
     res.status(200).json({ email: user.email });
   } else {

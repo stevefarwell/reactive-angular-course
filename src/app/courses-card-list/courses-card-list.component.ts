@@ -3,6 +3,8 @@ import {Course} from '../model/course';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {CourseDialogComponent} from '../course-dialog/course-dialog.component';
 import {filter, tap} from 'rxjs/operators';
+import { AuthStoreService } from '../services/auth-store.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-courses-card-list',
@@ -17,10 +19,13 @@ export class CoursesCardListComponent implements OnInit {
   @Output()
   private courseChanged: EventEmitter<any> = new EventEmitter();
 
-  constructor(private dialog: MatDialog) {
+  isLoggedIn$: Observable<boolean> = this.authStore.isLoggedIn$;
+
+  constructor(private dialog: MatDialog, private authStore: AuthStoreService) {
   }
 
   ngOnInit(): void {
+
   }
 
   editCourse(course: Course): void {
