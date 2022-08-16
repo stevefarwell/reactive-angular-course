@@ -15,12 +15,15 @@ export function getAllCourses(req: Request, res: Response) {
 
 
 export function getCourseById(req: Request, res: Response) {
-
-  const courseId = req.params['id'];
+  console.log('req: ', typeof req.params['id']);
+  const courseId = parseInt(req.params['id'], 10);
 
   const courses: any = Object.values(COURSES);
+  // console.log('courses: ', courses);
 
   const course = courses.find(item => item.id === courseId);
+
+  console.log('course: ', course);
 
   res.status(200).json(course);
 }
